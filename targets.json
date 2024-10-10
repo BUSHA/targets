@@ -2846,7 +2846,7 @@
         "upload_methods": ["uart", "wifi", "betaflight"],
         "min_version": "3.0.0",
         "platform": "esp8285",
-        "firmware": "Unified_ESP8285_LR1121_RX"
+        "firmware": "Unified_ESP8285_LR1121_900_RX"
       }
     },
     "rx_dual": {
