@@ -2867,7 +2867,6 @@
         "platform": "esp8285",
         "firmware": "Unified_ESP8285_LR1121_900_RX"
       }
-
     },
     "rx_dual": {
       "94e_v1": {
@@ -2894,7 +2893,17 @@
         "platform": "esp32",
         "firmware": "Unified_ESP32_900_TX"
       }
+    },
+    "rx_900": {
+      "rx433": {
+        "product_name": "EdifierD Diversity DUAL 433 RX",
+        "lua_name": "EdifierD TD 433RX",
+        "layout_file": "EdifierD TD 433RX.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp32",
+        "firmware": "UNIFIED_ESP32_900_RX"
+      }
     }
   }
-
 }
