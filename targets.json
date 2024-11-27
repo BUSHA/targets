@@ -2846,13 +2846,22 @@
       }
     }
   },
-  "lr1121": {
+  "mafia": {
     "name": "Generic 900 LR1121",
     "rx_900": {
       "dbr1": {
         "product_name": "Dbr1 ESP8285 LR1121 900Mhz RX",
         "lua_name": "ELRS LR1121 900RX",
         "layout_file": "Generic 900 8285 lr1121.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_LR1121_900_RX"
+      },
+      "dbr1v2": {
+        "product_name": "Dbr1v2 ESP8285 LR1121 900Mhz RX",
+        "lua_name": "ELRS LR1121 900RX",
+        "layout_file": "Generic 900 8285 lr1121 v2.json",
         "upload_methods": ["uart", "wifi", "betaflight"],
         "min_version": "3.0.0",
         "platform": "esp8285",
@@ -2866,7 +2875,17 @@
         "min_version": "3.0.0",
         "platform": "esp8285",
         "firmware": "Unified_ESP8285_LR1121_900_RX"
+      },
+      "pidor433": {
+        "product_name": "Pidor ESP8285 SX1276 433Mhz RX",
+        "lua_name": "Pidor 433RX",
+        "layout_file": "Pidor 433.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_900_RX"
       }
+
     },
     "rx_dual": {
       "94e_v1": {
