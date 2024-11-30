@@ -2897,6 +2897,18 @@
         "platform": "esp32",
         "firmware": "Unified_ESP32_LR1121_RX"
       }
+    },
+    "tx_900": {
+      "tx433": {
+        "product_name": "Fan OLED 433MHz TX",
+        "lua_name": "Fan 433TX",
+        "layout_file": "Fan 433 OLED.json",
+        "features": ["fan"],
+        "upload_methods": ["uart", "wifi"],
+        "min_version": "3.0.0",
+        "platform": "esp32",
+        "firmware": "Unified_ESP32_900_TX"
+      }
     }
   },
   "edifier": {
