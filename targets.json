@@ -2868,9 +2868,9 @@
         "firmware": "Unified_ESP8285_LR1121_900_RX"
       },
       "cyclone433": {
-        "product_name": "Cyclone ESP8285 LR1121 433Mhz RX",
-        "lua_name": "Cyclone 433RX",
-        "layout_file": "Cyclone 433 8285 lr1121.json",
+        "product_name": "Cyclone ESP8285 LR1121 RX",
+        "lua_name": "Cyclone LR1121RX",
+        "layout_file": "Cyclone 8285 lr1121.json",
         "upload_methods": ["uart", "wifi", "betaflight"],
         "min_version": "3.0.0",
         "platform": "esp8285",
