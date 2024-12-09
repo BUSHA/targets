@@ -2936,5 +2936,21 @@
         "firmware": "UNIFIED_ESP32_900_RX"
       }
     }
+  },
+  "belinrc": {
+    "name": "BelinRC",
+    "tx_900": {
+      "tx433": {
+        "product_name": "BelinRC OLED 433 TX",
+        "lua_name": "BelinRC 433TX",
+        "layout_file": "BelinRC 433 OLED Micro.json",
+        "features": ["fan"],
+        "upload_methods": ["uart", "wifi"],
+        "min_version": "3.0.0",
+        "platform": "esp32",
+        "firmware": "Unified_ESP32_900_TX"
+      }
+    }
   }
+
 }
