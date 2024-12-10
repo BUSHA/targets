@@ -1390,6 +1390,15 @@
         "platform": "esp32",
         "firmware": "Unified_ESP32_900_RX"
       },
+      "es900_dual_fake": {
+        "product_name": "Fake HappyModel ES900 Dual RX",
+        "lua_name": "FAKE HM ES900 Dual",
+        "layout_file": "Generic 900 True Diversity v2.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.3.0",
+        "platform": "esp32",
+        "firmware": "Unified_ESP32_900_RX"
+      },
       "epw6": {
         "product_name": "HappyModel EPW6 PWM RX",
         "lua_name": "HM EPW6 900RX",
