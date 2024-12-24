@@ -2893,6 +2893,15 @@
         "min_version": "3.0.0",
         "platform": "esp8285",
         "firmware": "Unified_ESP8285_900_RX"
+      },
+      "pidor433_2": {
+        "product_name": "Pidor AYZ ESP8285 SX1276 500Mhz RX",
+        "lua_name": "Pidor 500RX",
+        "layout_file": "Pidor 500 AYZ.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_900_RX"
       }
 
     },
