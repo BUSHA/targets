@@ -1347,7 +1347,7 @@
         "prior_target_name": "HappyModel_TX_ES900TX"
       },
       "es900max": {
-        "product_name": "HappyModel ES900 MAX TX",
+        "product_name": "HappyModel ES900 MAX ORANGE TX",
         "lua_name": "HM ES900 MAX",
         "layout_file": "HappyModel ES900 MAX.json",
         "upload_methods": ["uart", "wifi"],
