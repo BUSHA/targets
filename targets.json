@@ -2876,6 +2876,15 @@
         "platform": "esp8285",
         "firmware": "Unified_ESP8285_LR1121_900_RX"
       },
+      "dbr3": {
+        "product_name": "L900RX-DBR3 900Mhz RX",
+        "lua_name": "L900RX-DBR3",
+        "layout_file": "Dbr3.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_LR1121_900_RX"
+      },
       "cyclone433": {
         "product_name": "Cyclone ESP8285 LR1121 RX",
         "lua_name": "Cyclone LR1121RX",
