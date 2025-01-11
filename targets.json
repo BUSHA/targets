@@ -2903,6 +2903,15 @@
         "platform": "esp8285",
         "firmware": "Unified_ESP8285_900_RX"
       },
+      "pidor_beastfpv_735": {
+        "product_name": "Beastfpv 735MHz RX",
+        "lua_name": "BEASTFPV 735RX",
+        "layout_file": "Beastfpv 735.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_900_RX"
+      },      
       "pidor433_2": {
         "product_name": "Pidor AYZ ESP8285 SX1276 500Mhz RX",
         "lua_name": "Pidor 500RX",
