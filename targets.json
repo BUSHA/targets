@@ -2953,6 +2953,16 @@
         "min_version": "3.0.0",
         "platform": "esp32",
         "firmware": "Unified_ESP32_900_TX"
+      },
+      "cyclone_micro": {
+        "product_name": "CYCLONE 900MHz Micro TX",
+        "lua_name": "CYCLONE 900Micro",
+        "layout_file": "CYCLONE 900 Micro.json",
+        "features": ["fan"],
+        "upload_methods": ["uart", "wifi"],
+        "min_version": "3.0.0",
+        "platform": "esp32",
+        "firmware": "Unified_ESP32_900_TX"
       }
     }
   },
