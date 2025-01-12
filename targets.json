@@ -2856,11 +2856,11 @@
     }
   },
   "mafia": {
-    "name": "FPV Mafia added targets",
+    "name": "FPV Mafia targets",
     "rx_900": {
       "dbr1": {
         "product_name": "Dbr1 ESP8285 LR1121 900Mhz RX",
-        "lua_name": "ELRS LR1121 900RX",
+        "lua_name": "Dbr1 900RX",
         "layout_file": "Generic 900 8285 lr1121.json",
         "upload_methods": ["uart", "wifi", "betaflight"],
         "min_version": "3.0.0",
@@ -2869,7 +2869,7 @@
       },
       "dbr1v2": {
         "product_name": "Dbr1v2 ESP8285 LR1121 900Mhz RX",
-        "lua_name": "ELRS LR1121 900RX",
+        "lua_name": "Dbr1v2 900RX",
         "layout_file": "Generic 900 8285 lr1121 v2.json",
         "upload_methods": ["uart", "wifi", "betaflight"],
         "min_version": "3.0.0",
