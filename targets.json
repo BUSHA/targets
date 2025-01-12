@@ -2856,7 +2856,7 @@
     }
   },
   "mafia": {
-    "name": "Generic 900 LR1121",
+    "name": "FPV Mafia added targets",
     "rx_900": {
       "dbr1": {
         "product_name": "Dbr1 ESP8285 LR1121 900Mhz RX",
