@@ -22,6 +22,7 @@
   "led_rgb": 21,
   "led_rgb_isgrb": true,
   "screen_type": 4,
+  "screen_reversed": true,
   "screen_dc": 14,
   "screen_mosi": 12,
   "screen_rst": 33,
