@@ -2987,6 +2987,20 @@
       }
     }
   },
+  "flyfish": {
+    "name": "FlyFish",
+    "rx_2400": {
+      "2g4rx": {
+        "product_name": "FlyFish 2400MHz RX",
+        "lua_name": "FlyFish 2G4 RX",
+        "layout_file": "FlyFish 2G4 RX.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_2400_RX"
+      }
+    }
+  },
   "thxmrsquid": {
     "name": "ThxMrSquid",
     "rx_2400": {
