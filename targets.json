@@ -3116,7 +3116,16 @@
         "min_version": "3.5.0",
         "platform": "esp32-c3",
         "firmware": "Unified_ESP32C3_900_RX"
-      }
+      },
+      "bcsub": {
+        "product_name": "B.c SubGHz Nano RX",
+        "lua_name": "B.c SubGHz RX",
+        "layout_file": "B.c SubGHz RX.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.5.0",
+        "platform": "esp32-c3",
+        "firmware": "Unified_ESP32C3_900_RX"
+      }      
 
     },
     "rx_dual": {
