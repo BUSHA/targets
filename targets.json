@@ -3141,6 +3141,16 @@
         "platform": "esp32",
         "firmware": "Unified_ESP32_900_TX"
       },
+      "bl627": {
+        "product_name": "B SubGHz TX 2W",
+        "lua_name": "B SubG TX 2W",
+        "layout_file": "B SubGHz.json",
+        "features": ["fan"],
+        "upload_methods": ["uart", "wifi"],
+        "min_version": "3.4.0",
+        "platform": "esp32",
+        "firmware": "UNIFIED_ESP32_LR1121_TX"
+      },      
       "cyclone_micro": {
         "product_name": "CYCLONE 900MHz Micro TX",
         "lua_name": "CYCLONE 900Micro",
