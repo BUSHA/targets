@@ -3149,7 +3149,7 @@
         "upload_methods": ["uart", "wifi"],
         "min_version": "3.4.0",
         "platform": "esp32",
-        "firmware": "UNIFIED_ESP32_LR1121_TX"
+        "firmware": "Unified_ESP32_LR1121_TX"
       },      
       "cyclone_micro": {
         "product_name": "CYCLONE 900MHz Micro TX",
