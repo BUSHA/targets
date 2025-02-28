@@ -523,6 +523,24 @@
         "min_version": "3.3.0",
         "platform": "esp8285",
         "firmware": "Unified_ESP8285_900_RX"
+      },
+      "nano": {
+        "product_name": "DiFly 915m Nano RX",
+        "lua_name": "DIFLY Nano",
+        "layout_file": "Generic 900.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.3.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_900_RX"
+      },
+      "trued": {
+        "product_name": "DiFly TrueD 915 RX",
+        "lua_name": "DIFLY TrueD",
+        "layout_file": "Generic 900 True Diversity.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.3.0",
+        "platform": "esp32",
+        "firmware": "Unified_ESP32_900_RX"
       }
     }
   },
