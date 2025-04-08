@@ -1,0 +1,23 @@
+{
+  "serial_rx": 3,
+  "serial_tx": 1,
+  "radio_busy": 10,
+  "radio_dio1": 5,
+  "radio_miso": 12,
+  "radio_mosi": 13,
+  "radio_nss": 15,
+  "radio_rst": 9,
+  "radio_sck": 14,
+  "radio_dcdc": true,
+  "power_rxen": -1,
+  "power_txen": 4,
+  "power_lna_gain": 12,
+  "power_min": 0,
+  "power_high": 3,
+  "power_max": 3,
+  "power_default": 3,
+  "power_control": 0,
+  "power_values": [-4, -2, 2, 15],
+  "led": 16,
+  "button": 0
+}

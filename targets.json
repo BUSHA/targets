@@ -3421,6 +3421,17 @@
   },
   "ayz": {
     "name": "AYZ",
+    "rx_2400": {
+      "RD2R4": {
+        "product_name": "AYZ RD2R4 2400Mhz RX",
+        "lua_name": "AYZ RD2R4 2.4RX",
+        "layout_file": "AYZ RD2R4.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_2400_RX"
+      }
+    },
     "rx_900": {
       "9624R": {
         "product_name": "AYZ 9624R 500 RX",
@@ -3434,15 +3445,6 @@
           "radio_rfsw_ctrl": [5, 0, 4, 4, 0, 1, 0, 1],
           "led": 10
         }
-      },
-      "RD2R4": {
-        "product_name": "AYZ RD2R4 500Mhz RX",
-        "lua_name": "AYZ RD2R4 500RX",
-        "layout_file": "Pidor 500 AYZ.json",
-        "upload_methods": ["uart", "wifi", "betaflight"],
-        "min_version": "3.0.0",
-        "platform": "esp8285",
-        "firmware": "Unified_ESP8285_900_RX"
       }
     }
   },
@@ -3457,15 +3459,6 @@
         "min_version": "3.0.0",
         "platform": "esp8285",
         "firmware": "Unified_ESP8285_LR1121_900_RX"
-      },
-      "RD2R4": {
-        "product_name": "AYZ RD2R4 500Mhz RX",
-        "lua_name": "AYZ RD2R4 500RX",
-        "layout_file": "Pidor 500 AYZ.json",
-        "upload_methods": ["uart", "wifi", "betaflight"],
-        "min_version": "3.0.0",
-        "platform": "esp8285",
-        "firmware": "Unified_ESP8285_900_RX"
       }
     },
     "tx_900": {
