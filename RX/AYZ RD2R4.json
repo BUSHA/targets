@@ -11,7 +11,6 @@
   "radio_dcdc": true,
   "power_rxen": -1,
   "power_txen": 4,
-  "power_lna_gain": 12,
   "power_min": 0,
   "power_high": 3,
   "power_max": 3,
@@ -19,5 +18,6 @@
   "power_control": 0,
   "power_values": [-4, -2, 2, 15],
   "led": 16,
-  "button": 0
+  "button": 0,
+  "vbat_atten": -1
 }
