@@ -3430,6 +3430,19 @@
         "min_version": "3.0.0",
         "platform": "esp8285",
         "firmware": "Unified_ESP8285_2400_RX"
+      },
+      "MC2R4": {
+        "product_name": "AYZ MC2R4 2.4GHz RX",
+        "lua_name": "AYZ MC2R4 2.4RX",
+        "layout_file": "AYZ RD2R4.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_2400_RX",
+        "overlay": {
+          "power_values": [-10, -8, -6, -1],
+          "radio_dcdc": false
+        }
       }
     },
     "rx_900": {
@@ -3446,9 +3459,9 @@
           "led": 10
         }
       },
-      "mc2r4": {
-        "product_name": "AYZ MC2R4 433 RX",
-        "lua_name": "AYZ 433 RX",
+      "433m_v1": {
+        "product_name": "AYZ 433M V1 RX",
+        "lua_name": "AYZ 433M RX",
         "layout_file": "Radiomaster BR3.json",
         "upload_methods": ["uart", "wifi", "betaflight"],
         "min_version": "3.0.0",
