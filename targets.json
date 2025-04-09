@@ -3445,6 +3445,20 @@
           "radio_rfsw_ctrl": [5, 0, 4, 4, 0, 1, 0, 1],
           "led": 10
         }
+      },
+      "mc2r4": {
+        "product_name": "AYZ MC2R4 433 RX",
+        "lua_name": "AYZ 433 RX",
+        "layout_file": "Radiomaster BR3.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_900_RX",
+        "overlay": {
+          "power_min": 1,
+          "power_high": 3,
+          "power_max": 3
+        }
       }
     }
   },
