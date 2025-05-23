@@ -3335,7 +3335,7 @@
         "firmware": "Unified_ESP8285_900_RX"
       },
       "pidor520c3": {
-        "product_name": "Pidor ESP32C3 Ra-01 520Mhz RX",
+        "product_name": "Pidor ESP32C3 Ra-02 520Mhz RX",
         "lua_name": "Pidor 520RX",
         "layout_file": "Pidor 520 C3 RA02.json",
         "upload_methods": ["uart", "wifi", "betaflight"],
