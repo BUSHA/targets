@@ -3419,6 +3419,20 @@
       }
     }
   },
+    "maxlink": {
+    "name": "MaxLink",
+    "rx_900": {
+      "rx360": {
+        "product_name": "MaxLink 360-560 RX",
+        "lua_name": "MaxLink 360RX",
+        "layout_file": "Generic 900.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_900_RX"
+      }
+    }
+  },
   "ayz": {
     "name": "AYZ",
     "rx_2400": {
