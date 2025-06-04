@@ -298,7 +298,7 @@
         "firmware": "Unified_ESP32_900_TX"
       },
       "micro400v1-1_370": {
-        "product_name": "BETAFPV 400MHz Micro TX V1.1 (370-420MHz)",
+        "product_name": "BETAFPV 400MHz Micro TX V1.1 370-420MHz",
         "lua_name": "TX 400 v1.1 370",
         "layout_file": "BETAFPV 400 Micro V1.json",
         "logo_file": "betafpv.bin",
@@ -315,7 +315,7 @@
         }
       },
       "micro400v1-1_440": {
-        "product_name": "BETAFPV 400MHz Micro TX V1.1 (440-470MHz)",
+        "product_name": "BETAFPV 400MHz Micro TX V1.1 440-470MHz",
         "lua_name": "TX 400 v1.1 440",
         "layout_file": "BETAFPV 400 Micro V1.json",
         "logo_file": "betafpv.bin",
@@ -332,7 +332,7 @@
         }
       },
       "micro400v1-1_500": {
-        "product_name": "BETAFPV 400MHz Micro TX V1.1 (500-560MHz)",
+        "product_name": "BETAFPV 400MHz Micro TX V1.1 500-560MHz",
         "lua_name": "TX 400 v1.1 500",
         "layout_file": "BETAFPV 400 Micro V1.json",
         "logo_file": "betafpv.bin",
