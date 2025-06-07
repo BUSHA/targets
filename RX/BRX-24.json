@@ -11,14 +11,15 @@
     "radio_nss": 7,
     "radio_rst": 2,
 
+    "radio_rfsw_ctrl1": [3,0,2,3,1,0,0,0],
     "radio_rfsw_ctrl": [3,0,2,3,1,0,0,0],
     "radio_dcdc": true,
     "radio_tcxo": true,
 
     "power_min": 0,
     "power_high": 3,
-    "power_max": 3,
-    "power_default": 0,
+    "power_max": 4,
+    "power_default": 4,
     "power_control": 0,
     "power_values": [11,14,18,20,22], 
     "power_values_dual": [11,13,13,13,13],
@@ -26,5 +27,4 @@
     "button": 9,
     "led": 8,
     "led_red_invert": 1
-
 }
