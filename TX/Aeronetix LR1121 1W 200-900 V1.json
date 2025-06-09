@@ -1,0 +1,32 @@
+{
+    "serial_rx": 2,
+    "serial_tx": 2,
+
+    "radio_miso": 27,
+    "radio_mosi": 26,
+    "radio_sck": 25,
+
+    "radio_busy": 32,
+    "radio_dio1": 14,
+    "radio_nss": 33,
+    "radio_rst": 13,
+
+    "radio_rfo_hf": true,
+
+    "power_min": 0,
+    "power_high": 6,
+    "power_max": 6,
+    "power_default": 0,
+    "power_control": 0,
+    "power_values": [-6,-3,0,3,6,10,14],
+    "power_values_dual": [-17,-14,-9,-6,1,1],
+
+    "led_rgb": 23,
+    "led_rgb_isgrb": true,
+    "button": 0,
+
+    "use_backpack": true,
+    "debug_backpack_baud": 460800,
+    "debug_backpack_rx": 18,
+    "debug_backpack_tx": 5
+}
