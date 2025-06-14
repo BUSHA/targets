@@ -3646,5 +3646,19 @@
         "firmware": "Unified_ESP32_LR1121_TX"
       }
     }
+  },
+  "flytex": {
+    "name": "Flytex",
+    "rx_dual": {
+      "db2": {
+        "product_name": "Flytex DB2 Dual Band True Diversity RX",
+        "lua_name": "FLTE DB2",
+        "layout_file": "Flytex DB2 LR1121.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.4.0",
+        "platform": "esp32",
+        "firmware": "Unified_ESP32_LR1121_RX"
+      }
+    }
   }
 }
