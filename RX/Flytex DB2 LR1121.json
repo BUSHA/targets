@@ -29,17 +29,9 @@
         -3,
         1
     ],
-    "led_rgb": 22,
-    "led_rgb_isgrb": false,
-    "ledidx_rgb_status": [
-        0
-    ],
-    "ledidx_rgb_boot": [
-        0
-    ],
+    "led": 22,
     "radio_dcdc": true,
     "button": 0,
-    "led": 22,
     "serial1_rx": 5,
     "serial1_tx": 18,
     "radio_rfsw_ctrl": [
