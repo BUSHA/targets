@@ -39,26 +39,103 @@
       }
     }
   },
-  "aeronetix": {
-    "name": "Aeronetix",
-    "tx_900": {
-      "lr1121_v2": {
-        "product_name": "AERONETIX LR1121 V2 TX",
-        "lua_name": "LR1121 V2 TX",
-        "layout_file": "Aeronetix LR1121 V2.json",
-        "upload_methods": ["uart", "wifi"],
-        "min_version": "3.4.0",
-        "platform": "esp32",
-        "firmware": "Unified_ESP32_LR1121_TX"
-      }
-    },
+    "aeronetix": {
+        "name": "AERONETIX",
+        "tx_900": {
+            "v1": {
+                "product_name": "AERONETIX 433MHz V1 TX",
+                "lua_name": "AERONETIX 433 V1",
+                "layout_file": "AERONETIX 433 V1.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.0.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_900_TX",
+                "prior_target_name": "AERONETIX_433_TX"
+            },
+            "v2": {
+                "product_name": "AERONETIX 433MHz V2 TX",
+                "lua_name": "AERONETIX 433 V2",
+                "layout_file": "AERONETIX 433 V2.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.0.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_900_TX",
+                "prior_target_name": "AERONETIX_433_TX"
+            },
+            "v2_1": {
+                "product_name": "AERONETIX 490-560MHz V1 TX",
+                "lua_name": "AERONETIX 490_550 V1",
+                "layout_file": "AERONETIX 490_550 V1.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.0.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_900_TX",
+                "prior_target_name": "AERONETIX_433_TX"
+            }            
+        },
+        "tx_dual": {
+            "lr1121_v1": {
+                "product_name": "AERONETIX LR1121 V1 TX",
+                "lua_name": "LR1121 V1 TX",
+                "layout_file": "Aeronetix LR1121 V1.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            },
+            "lr1121_150_450_v2": {
+                "product_name": "AERONETIX LR1121 150-450 V2 TX",
+                "lua_name": "LR1121 150-450 V2 TX",
+                "layout_file": "Aeronetix LR1121 150-450 V2.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            },
+            "lr1121_450_700_v2": {
+                "product_name": "AERONETIX LR1121 450-700 V2 TX",
+                "lua_name": "LR1121 450-700 V2 TX",
+                "layout_file": "Aeronetix LR1121 450-700 V2.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            },
+            "lr1121_5w_150_450_v1": {
+                "product_name": "AERONETIX LR1121 5W 150-450 V1 TX",
+                "lua_name": "LR1121 5W 150-450 V1 TX",
+                "layout_file": "Aeronetix LR1121 5W 150-450 V1.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            },
+            "lr1121_5w_450_750_v1": {
+                "product_name": "AERONETIX LR1121 5W 450-750 V1 TX",
+                "lua_name": "LR1121 5W 450-750 V1 TX",
+                "layout_file": "Aeronetix LR1121 5W 450-750 V1.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            },
+            "lr1121_1w_v3": {
+                "product_name": "AERONETIX LR1121 1W V3 TX",
+                "lua_name": "LR1121 1W V3 TX",
+                "layout_file": "Aeronetix LR1121 1W V3.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            }
+        },
     "rx_900": {
       "lr1121": {
         "product_name": "AERONETIX LR1121 RX",
         "lua_name": "ELRS LR1121 900RX",
         "layout_file": "Generic 900 8285 lr1121.json",
         "upload_methods": ["uart", "wifi", "betaflight"],
-        "min_version": "3.3.0",
+        "min_version": "3.4.0",
         "platform": "esp8285",
         "firmware": "Unified_ESP8285_LR1121_900_RX"
       }
@@ -286,16 +363,50 @@
         "firmware": "Unified_ESP32_900_TX",
         "prior_target_name": "BETAFPV_900_TX_MICRO_V2"
       },
-      "micro400v2": {
-        "product_name": "BETAFPV 400MHz Micro TX V2",
-        "lua_name": "TX 400 Module",
-        "layout_file": "BETAFPV 400 Micro V2.json",
+      "micro400v1": {
+        "product_name": "BETAFPV 400MHz Micro TX V1.0",
+        "lua_name": "TX 400 v1.0",
+        "layout_file": "BETAFPV 400 Micro V1.json",
         "logo_file": "betafpv.bin",
         "features": ["fan"],
         "upload_methods": ["uart", "wifi"],
         "min_version": "3.4.0",
         "platform": "esp32",
         "firmware": "Unified_ESP32_900_TX"
+      },
+      "micro400v1-1_370": {
+        "product_name": "BETAFPV 400MHz Micro TX V1.1 370-440MHz",
+        "lua_name": "TX 400 v1.1 370",
+        "layout_file": "BETAFPV 400 Micro V1.json",
+        "logo_file": "betafpv.bin",
+        "features": ["fan"],
+        "upload_methods": ["uart", "wifi"],
+        "min_version": "3.4.0",
+        "platform": "esp32",
+        "firmware": "Unified_ESP32_900_TX",
+        "overlay": {
+          "power_apc2": 26,
+          "power_control": 3,
+          "power_values": [207,207,207,207],
+          "power_values2": [0,2,5,13]
+        }
+      },
+      "micro400v1-1_500": {
+        "product_name": "BETAFPV 400MHz Micro TX V1.1 440-560MHz",
+        "lua_name": "TX 400 v1.1 440",
+        "layout_file": "BETAFPV 400 Micro V1.json",
+        "logo_file": "betafpv.bin",
+        "features": ["fan"],
+        "upload_methods": ["uart", "wifi"],
+        "min_version": "3.4.0",
+        "platform": "esp32",
+        "firmware": "Unified_ESP32_900_TX",
+        "overlay": {
+          "power_apc2": 26,
+          "power_control": 3,
+          "power_values": [209,209,207,215],
+          "power_values2": [3,6,10,15]
+        }
       }
     },
     "rx_900": {
@@ -3335,7 +3446,7 @@
         "firmware": "Unified_ESP8285_900_RX"
       },
       "pidor520c3": {
-        "product_name": "Pidor ESP32C3 Ra-01 520Mhz RX",
+        "product_name": "Pidor ESP32C3 Ra-02 520Mhz RX",
         "lua_name": "Pidor 520RX",
         "layout_file": "Pidor 520 C3 RA02.json",
         "upload_methods": ["uart", "wifi", "betaflight"],
@@ -3445,6 +3556,20 @@
       }
     }
   },
+    "maxlink": {
+    "name": "MaxLink",
+    "rx_900": {
+      "rx360": {
+        "product_name": "MaxLink 360-560 RX",
+        "lua_name": "MaxLink 360RX",
+        "layout_file": "Generic 900.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_900_RX"
+      }
+    }
+  },
   "ayz": {
     "name": "AYZ",
     "rx_2400": {
@@ -3545,6 +3670,20 @@
         "min_version": "3.3.0",
         "platform": "esp32",
         "firmware": "Unified_ESP32_LR1121_TX"
+      }
+    }
+  },
+  "flytex": {
+    "name": "Flytex",
+    "rx_dual": {
+      "db2": {
+        "product_name": "Flytex DB2 Dual Band True Diversity RX",
+        "lua_name": "FLTE DB2",
+        "layout_file": "Flytex DB2 LR1121.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.4.0",
+        "platform": "esp32",
+        "firmware": "Unified_ESP32_LR1121_RX"
       }
     }
   }
