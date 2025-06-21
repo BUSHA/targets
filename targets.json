@@ -3496,23 +3496,6 @@
         "platform": "esp32",
         "firmware": "Unified_ESP32_LR1121_TX"
       }
-    },
-    "tx_dual": {
-      "brx24_rx_as_tx": {
-        "product_name": "Barvinok crossband BRX-24 RX as TX",
-        "lua_name": "BRX24 crossband",
-        "layout_file": "Barvinok BRX24.json",
-        "upload_methods": ["uart", "wifi", "betaflight"],
-        "min_version": "3.4.0",
-        "platform": "esp32-c3",
-        "firmware": "Unified_ESP32C3_LR1121_TX",
-        "overlay": {
-          "serial_rx": 21,
-          "radio_dcdc": false,
-          "led_red": 8,
-          "led": 0
-        }
-      }      
     }
   },
   "edifier": {
