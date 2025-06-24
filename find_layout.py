@@ -1,7 +1,6 @@
 # Для роботи цього скрипту потрібні зовнішні бібліотеки.
 # Встановіть їх командами:
-# pip install simple-term-menu
-# pip install pyperclip
+# pip install questionary pyperclip
 
 import json
 import os
@@ -10,12 +9,11 @@ import pathlib
 import difflib
 from collections import defaultdict
 
-# Спроба імпортувати необхідні бібліотеки
 try:
-    from simple_term_menu import TerminalMenu
+    import questionary
 except ImportError:
-    print("Помилка: бібліотеку 'simple-term-menu' не знайдено.")
-    print("Будь ласка, встановіть її командою: pip install simple-term-menu")
+    print("Помилка: бібліотеку 'questionary' не знайдено.")
+    print("Будь ласка, встановіть її командою: pip install questionary")
     sys.exit(1)
 
 try:
@@ -24,7 +22,6 @@ except ImportError:
     print("Помилка: бібліотеку 'pyperclip' не знайдено.")
     print("Будь ласка, встановіть її командою: pip install pyperclip")
     sys.exit(1)
-
 
 # --- Налаштування ---
 MATCH_THRESHOLD = 80.0
@@ -45,44 +42,16 @@ class BColors:
     UNDERLINE = '\033[4m'
 
 def wait_for_enter(prompt_text):
-    """
-    Виводить повідомлення і надійно очікує натискання клавіші Enter,
-    працюючи коректно навіть у "сирому" (raw) режимі термінала.
-    """
     print(f"{BColors.BOLD}{prompt_text}{BColors.ENDC}", end="", flush=True)
-    
-    if os.name == 'nt':  # Для Windows
-        import msvcrt
-        while True:
-            if msvcrt.getch() in (b'\r', b'\n'):
-                break
-    else:  # Для Linux, macOS (POSIX)
-        import tty
-        import termios
-        if not sys.stdin.isatty():
-            input()
-            return
-            
-        fd = sys.stdin.fileno()
-        old_settings = termios.tcgetattr(fd)
-        try:
-            tty.setraw(sys.stdin.fileno())
-            while True:
-                char = sys.stdin.read(1)
-                if char in ('\r', '\n'):
-                    break
-        finally:
-            termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+    input()
     print()
 
 def get_json_from_clipboard():
-    """Отримує JSON з системного буфера обміну."""
     print("Спроба отримати JSON з буфера обміну...")
     try:
         clipboard_content = pyperclip.paste()
         if not clipboard_content or not clipboard_content.strip():
             raise ValueError("Буфер обміну порожній або містить лише пробіли.")
-        
         user_data = json.loads(clipboard_content)
         print(f"{BColors.OKGREEN}✓ JSON успішно отримано та розпарсено з буфера обміну.{BColors.ENDC}")
         return user_data
@@ -137,14 +106,10 @@ def find_matching_files(user_data, layout_map):
                 continue
     return found_matches
 
-# --- ЗМІНЕНО: Повертаємось до стандартного компактного diff ---
 def display_classic_diff(user_data, file_data, file_path_str):
-    """Форматує та виводить diff у стандартному стилі unified_diff."""
     user_json_str = json.dumps(user_data, indent=4, sort_keys=True).splitlines()
     file_json_str = json.dumps(file_data, indent=4, sort_keys=True).splitlines()
 
-    # Ми більше не вказуємо параметр 'n' (кількість рядків контексту),
-    # щоб difflib використовував стандартне значення (зазвичай 3).
     diff = difflib.unified_diff(
         user_json_str,
         file_json_str,
@@ -156,7 +121,6 @@ def display_classic_diff(user_data, file_data, file_path_str):
     print("\n" + "="*80)
     print(f"{BColors.BOLD}Порівняння для файлу: {file_path_str}{BColors.ENDC}")
     print("="*80)
-    
     has_diff = False
     for line in diff:
         has_diff = True
@@ -166,10 +130,8 @@ def display_classic_diff(user_data, file_data, file_path_str):
         elif line.startswith('-'): print(f"{BColors.FAIL}{line}{BColors.ENDC}")
         elif line.startswith('@@'): print(f"{BColors.CYAN}{line}{BColors.ENDC}")
         else: print(line)
-    
     if not has_diff:
         print(f"{BColors.OKGREEN}Файли повністю ідентичні (після сортування ключів).{BColors.ENDC}")
-
     print("="*80 + "\n")
 
 def format_device_list_string(devices):
@@ -188,9 +150,7 @@ def format_device_list_string(devices):
         else: unit = "пристроїв"
         return f"Використовується в: {devices[0]}, {devices[1]} і ще {remaining} {unit}"
 
-
 def main():
-    """Головна функція скрипту."""
     script_dir = pathlib.Path(__file__).parent
     targets_path = script_dir / TARGETS_FILENAME
     layout_map = {}
@@ -210,13 +170,13 @@ def main():
         sys.exit(1)
 
     matches = find_matching_files(user_data, layout_map)
-    
+
     if not matches:
         print(f"\n{BColors.BOLD}Результат: Співпадінь з порогом >= {MATCH_THRESHOLD}% не знайдено.{BColors.ENDC}")
         return
 
     matches.sort(key=lambda item: item[1], reverse=True)
-    
+
     while True:
         menu_entries = []
         for path, percentage, devices, _ in matches:
@@ -228,30 +188,24 @@ def main():
                 entry += f"  ({device_str})"
             menu_entries.append(entry)
 
-        terminal_menu = TerminalMenu(
-            menu_entries,
-            title="Оберіть файл для перегляду diff (використовуйте стрілки, Enter для вибору, 'q' або Esc для виходу):",
-            menu_cursor_style=("fg_cyan", "bold"),
-            menu_highlight_style=("bg_yellow", "fg_black"),
-            cycle_cursor=True,
-            clear_screen=True,
-        )
-        
-        selected_index = terminal_menu.show()
-        
-        if selected_index is None:
+        choice = questionary.select(
+            "Оберіть файл для перегляду diff (Enter — вибір, Esc/q — вихід):",
+            choices=menu_entries + ["Вийти"]
+        ).ask()
+
+        if not choice or choice == "Вийти":
             break
-        
+
+        selected_index = menu_entries.index(choice)
         chosen_match = matches[selected_index]
         path, _, _, file_data = chosen_match
         relative_path = os.path.join(path.parent.name, path.name)
-        
+
         display_classic_diff(user_data, file_data, relative_path)
-        
+
         wait_for_enter("Натисніть Enter, щоб повернутись до меню...")
 
     print("\nРоботу завершено.")
-
 
 if __name__ == "__main__":
     main()
