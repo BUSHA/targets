@@ -3618,6 +3618,15 @@
           "power_high": 3,
           "power_max": 3
         }
+      },
+      "ff14": {
+        "product_name": "AYZ 500M FF V1.4 RX",
+        "lua_name": "AYZ 500M RX",
+        "layout_file": "Pidor 500 AYZ.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_900_RX",
       }
     }
   },
