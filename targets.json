@@ -3669,6 +3669,17 @@
   },
   "flytex": {
     "name": "Flytex",
+    "rx_900": {
+      "rx433": {
+        "product_name": "Flytex Fuzia 433MHz",
+        "lua_name": "FLTE 433",
+        "layout_file": "Generic 900.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.4.0",
+        "platform": "esp8285",
+        "firmware": "Unified_ESP8285_900_RX"
+      }
+    },
     "rx_dual": {
       "db2": {
         "product_name": "Flytex DB2 Dual Band True Diversity RX",
