@@ -3620,13 +3620,13 @@
         }
       },
       "ff14": {
-        "product_name": "AYZ 500M FF V1.4 RX",
-        "lua_name": "AYZ 500M RX",
-        "layout_file": "Pidor 500 AYZ.json",
+        "product_name": "AYZ 500M V1 RX",
+        "lua_name": "AYZ 433M RX",
+        "layout_file": "Radiomaster BR3.json",
         "upload_methods": ["uart", "wifi", "betaflight"],
         "min_version": "3.0.0",
         "platform": "esp8285",
-        "firmware": "Unified_ESP8285_900_RX",
+        "firmware": "Unified_ESP8285_900_RX"
       }
     }
   },
