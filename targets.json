@@ -3627,6 +3627,18 @@
         "min_version": "3.0.0",
         "platform": "esp8285",
         "firmware": "Unified_ESP8285_900_RX"
+      },
+      "px1011": {
+        "product_name": "PX1011 ELRS_400 V1.1 RX",
+        "lua_name": "PX1011 400M RX",
+        "layout_file": "Generic 900 True Diversity.json",
+        "upload_methods": ["uart", "wifi", "betaflight"],
+        "min_version": "3.0.0",
+        "platform": "esp32",
+        "firmware": "Unified_ESP32_900_RX",
+        "overlay": {
+          "power_rxen": 20
+        }
       }
     }
   },
