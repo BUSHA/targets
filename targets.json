@@ -3262,7 +3262,21 @@
                 "min_version": "3.5.0",
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_LR1121_TX"
-            }
+            },
+            "xr4_as_tx": {
+                "product_name": "RadioMaster XR4 Dual Band True Diversity RX as TX",
+                "lua_name": "RM XR4 AS TX",
+                "layout_file": "RadioMaster XR4 as TX.json",
+                "overlay": {
+                    "serial1_rx": 18,
+                    "serial1_tx": 18,
+                    "radio_rfsw_ctrl": [15, 0, 12, 8, 8, 6, 0, 5]
+                },
+                "upload_methods": ["etx", "wifi"],
+                "min_version": "3.5.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            }            
         },
         "rx_dual": {
             "dbr4": {
