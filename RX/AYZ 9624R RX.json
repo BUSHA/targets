@@ -23,7 +23,12 @@
     "power_max": 3,
     "power_default": 0,
     "power_control": 0,
-    "power_values": null,
+    "power_values": [
+        12,
+        16,
+        19,
+        22
+    ],
     "led": 10,
     "radio_dcdc": true,
     "button": 9,
