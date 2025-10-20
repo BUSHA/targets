@@ -3748,7 +3748,7 @@
                 "firmware": "Unified_ESP32_LR1121_RX"
             },
             "9624R24": {
-                "product_name": "AYZ 9624R 2G4 RX",
+                "product_name": "AYZ 9624R Dual RX",
                 "lua_name": "AYZ 9624 2G4 RX",
                 "layout_file": "AYZ 9624R RX.json",
                 "upload_methods": ["uart", "wifi", "betaflight"],
@@ -3874,7 +3874,7 @@
         },
         "rx_900": {
             "9624R": {
-                "product_name": "AYZ 9624R 500 RX",
+                "product_name": "AYZ 9624R 500MHz RX",
                 "lua_name": "AYZ 500 RX",
                 "layout_file": "B.c SubGHz RX.json",
                 "upload_methods": ["uart", "wifi", "betaflight"],
