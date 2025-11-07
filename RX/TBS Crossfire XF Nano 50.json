@@ -1,0 +1,32 @@
+{
+    "serial_rx": 9,
+    "serial_tx": 10,
+    "serial1_rx": 3,
+    "serial1_tx": 1,
+    "radio_dio0": 35,
+    "radio_miso": 19,
+    "radio_mosi": 23,
+    "radio_nss": 5,
+    "radio_rst": 2,
+    "radio_sck": 18,
+    "power_txen": 0,
+    "power_min": 0,
+    "power_high": 2,
+    "power_max": 2,
+    "power_default": 2,
+    "power_control": 0,
+    "power_values": [
+        9,
+        12,
+        15
+    ],
+    "pwm_outputs": [
+        3,
+        1,
+        27,
+        26
+    ],
+    "led": 33,
+    "led_red_invert": true,
+    "button": 4
+}

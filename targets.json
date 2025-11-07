@@ -3544,6 +3544,20 @@
             }
         }
     },
+    "tbs": {
+        "name": "TBS",
+        "rx_900": {
+            "tbs_crossfire_xf_nano_50": {
+                "product_name": "TBS Crossfire XF Nano 50 RX",
+                "lua_name": "TBS CRSF Nano 50",
+                "layout_file": "TBS Crossfire XF Nano 50.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.3.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_900_RX"
+            }
+        }
+    },    
     "tunerc": {
         "name": "TuneRC",
         "rx_2400": {
