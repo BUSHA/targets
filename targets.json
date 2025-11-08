@@ -1215,6 +1215,20 @@
             }
         }
     },
+    "flashtech": {
+        "name": "Flash Tech",
+        "rx_dual": {
+            "se4": {
+                "product_name": "SE4 900/2400 Dual Band Xross Gemini RX",
+                "lua_name": "SE4 Dual Gemini RX",
+                "layout_file": "SE4 C3 Dual Band Xross Gemini RX.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.1",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_LR1121_RX"
+            }
+        }
+    },
     "frsky": {
         "name": "Frsky",
         "tx_900": {
