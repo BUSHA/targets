@@ -1673,6 +1673,17 @@
                 "firmware": "Unified_ESP32_900_TX"
             }
         },
+        "tx_dual": {
+            "dual": {
+                "product_name": "GEPRC 900/2400 Gemini Xrossband RX as TX",
+                "lua_name": "GEPRC GemX as TX",
+                "layout_file": "GEPRC 900_2400 Gemini Xrossband RX as TX.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            }
+        },
         "rx_900": {
             "nano": {
                 "product_name": "GEPRC Nano 900MHz RX",
@@ -3281,11 +3292,6 @@
                 "product_name": "RadioMaster XR4 Dual Band True Diversity RX as TX",
                 "lua_name": "RM XR4 AS TX",
                 "layout_file": "RadioMaster XR4 as TX.json",
-                "overlay": {
-                    "serial1_rx": 18,
-                    "serial1_tx": 18,
-                    "radio_rfsw_ctrl": [15, 0, 12, 8, 8, 6, 0, 5]
-                },
                 "upload_methods": ["etx", "wifi"],
                 "min_version": "3.5.0",
                 "platform": "esp32",
