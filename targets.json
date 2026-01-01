@@ -4373,6 +4373,20 @@
             }
         }
     },
+    "hpxgrc": {
+        "name": "HPXGRC",
+        "rx_dual": {
+            "superx_nano": {
+                "product_name": "XGBETAFPV SuperX Nano RX",
+                "lua_name": "XGRC SuperX Db",
+                "layout_file": "HPXGRC SuperX Db.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "UNIFIED_ESP32C3_LR1121_RX"                
+            }
+        }
+    },
     "oxbot": {
         "name": "Oxbot",
         "rx_2400": {
