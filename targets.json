@@ -3930,24 +3930,24 @@
             }
         }
     },
-    "mafia": {
-        "name": "FPV Mafia targets",
+    "hobbyporter": {
+        "name": "Hobbyporter",
         "rx_900": {
             "dbr1": {
-                "product_name": "Dbr1 ESP8285 LR1121 900Mhz RX",
+                "product_name": "Hobbyporter DBR1 RX",
                 "lua_name": "Dbr1 900RX",
                 "layout_file": "Generic 900 8285 lr1121.json",
                 "upload_methods": ["uart", "wifi", "betaflight"],
-                "min_version": "3.0.0",
+                "min_version": "3.4.0",
                 "platform": "esp8285",
                 "firmware": "Unified_ESP8285_LR1121_900_RX"
             },
             "dbr1v2": {
-                "product_name": "Dbr1v2 ESP8285 LR1121 900Mhz RX",
-                "lua_name": "Dbr1v2 900RX",
+                "product_name": "Hobbyporter DBR1 V2 RX",
+                "lua_name": "Dbr1 V2 900RX",
                 "layout_file": "Generic 900 8285 lr1121 v2.json",
                 "upload_methods": ["uart", "wifi", "betaflight"],
-                "min_version": "3.0.0",
+                "min_version": "3.4.0",
                 "platform": "esp8285",
                 "firmware": "Unified_ESP8285_LR1121_900_RX"
             },
@@ -3959,7 +3959,12 @@
                 "min_version": "3.4.0",
                 "platform": "esp8285",
                 "firmware": "Unified_ESP8285_LR1121_900_RX"
-            },
+            }            
+        }
+    },
+    "mafia": {
+        "name": "FPV Mafia targets",
+        "rx_900": {
             "pidor433": {
                 "product_name": "Pidor ESP8285 SX1276 433Mhz RX",
                 "lua_name": "Pidor 433RX",
