@@ -4029,7 +4029,16 @@
                 "min_version": "3.4.0",
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_LR1121_RX"
-            }
+            },
+            "blast_s": {
+                "product_name": "Blast RC S-Band RX",
+                "lua_name": "Blast RC S-Band ",
+                "layout_file": "Generic 2400.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.4.0",
+                "platform": "esp8285",
+                "firmware": "Unified_ESP8285_LR1121_900_RX"
+            }            
         },
         "tx_900": {
             "tx433": {
