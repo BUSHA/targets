@@ -323,7 +323,16 @@
                 "min_version": "3.5.4",
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_LR1121_TX"
-            }
+            },
+            "dual_as_tx": {
+                "product_name": "BAYCKRC 900/2400 Dual Band Gemini RX as TX",
+                "lua_name": "BK 900/2400 GRx",
+                "layout_file": "BAYCKRC Dual Band Gemini RX as TX.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            }            
         },
         "rx_dual": {
             "dual": {
