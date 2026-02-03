@@ -4044,6 +4044,21 @@
                 "firmware": "Unified_ESP32C3_900_RX"
             }
         },
+        "rx_2400": {
+            "dual-core": {
+                "product_name": "N24R_TD_D4 RX",
+                "lua_name": "N24R_TD_D4",
+                "layout_file": "Generic 2400 True Diversity PA.json",
+                "overlay": {
+                    "serial1_tx": 5,
+                    "radio_dcdc": true
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.3.1",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_2400_RX"
+            }
+        },
         "rx_dual": {
             "94e_v1": {
                 "product_name": "Generic ESP32 LR1121 TD 900Mhz RX",
