@@ -64,18 +64,22 @@ def get_json_from_clipboard():
         raise e
 
 def build_layout_map(targets_data):
-    layout_to_devices = defaultdict(list)
+    # layout_file -> list of {product_name, overlay}
+    layout_to_targets = defaultdict(list)
     def traverse(node):
         if isinstance(node, dict):
             if 'layout_file' in node and 'product_name' in node:
-                layout_to_devices[node['layout_file']].append(node['product_name'])
+                layout_to_targets[node['layout_file']].append({
+                    'product_name': node['product_name'],
+                    'overlay': node.get('overlay', {})
+                })
             for value in node.values():
                 traverse(value)
         elif isinstance(node, list):
             for item in node:
                 traverse(item)
     traverse(targets_data)
-    return dict(layout_to_devices)
+    return dict(layout_to_targets)
 
 def calculate_match_percentage(base_data, compare_data):
     if not isinstance(base_data, dict) or not isinstance(compare_data, dict): return 0.0
@@ -98,10 +102,42 @@ def find_matching_files(user_data, layout_map):
             try:
                 with open(file_path, 'r', encoding='utf-8') as f:
                     file_data = json.load(f)
-                percentage = calculate_match_percentage(user_data, file_data)
-                if percentage >= MATCH_THRESHOLD:
-                    devices = layout_map.get(file_path.name, [])
-                    found_matches.append((file_path, percentage, devices, file_data))
+                
+                # 1. Спершу перевіряємо чистий файл (без оверлеїв)
+                plain_percentage = calculate_match_percentage(user_data, file_data)
+                
+                # Отримуємо всі гарнітарні цілі для цього файлу
+                targets = layout_map.get(file_path.name, [])
+                
+                # Групуємо цілі за оверлеями, щоб не порівнювати одне й те саме багато разів
+                overlay_groups = defaultdict(list)
+                for t in targets:
+                    overlay_json = json.dumps(t['overlay'], sort_keys=True)
+                    overlay_groups[overlay_json].append(t['product_name'])
+                
+                added_plain = False
+                
+                # 2. Перевіряємо кожну унікальну комбінацію файла та оверлея
+                for overlay_json, device_names in overlay_groups.items():
+                    overlay = json.loads(overlay_json)
+                    if not overlay:
+                        if plain_percentage >= MATCH_THRESHOLD:
+                            found_matches.append((file_path, plain_percentage, device_names, file_data, {}))
+                        added_plain = True
+                        continue
+                    
+                    # Застосовуємо оверлей до копії даних файлу
+                    modified_data = file_data.copy()
+                    modified_data.update(overlay)
+                    
+                    percentage = calculate_match_percentage(user_data, modified_data)
+                    if percentage >= MATCH_THRESHOLD:
+                        found_matches.append((file_path, percentage, device_names, modified_data, overlay))
+                
+                # 3. Якщо чистий файл підходить, але він не використовується жодною ціллю без оверлея
+                if not added_plain and plain_percentage >= MATCH_THRESHOLD:
+                    found_matches.append((file_path, plain_percentage, [], file_data, {}))
+
             except (json.JSONDecodeError, IOError):
                 continue
     return found_matches
@@ -179,10 +215,17 @@ def main():
 
     while True:
         menu_entries = []
-        for path, percentage, devices, _ in matches:
+        for path, percentage, devices, _, overlay in matches:
             relative_path = os.path.join(path.parent.name, path.name)
             percent_str = f"{percentage:6.2f}%"
             entry = f"[{percent_str}] {relative_path}"
+            
+            if overlay:
+                overlay_str = ", ".join(f"{k}={v}" for k, v in overlay.items())
+                if len(overlay_str) > 40:
+                    overlay_str = overlay_str[:37] + "..."
+                entry += f" + overlay({overlay_str})"
+                
             if devices:
                 device_str = format_device_list_string(devices)
                 entry += f"  ({device_str})"
@@ -198,10 +241,15 @@ def main():
 
         selected_index = menu_entries.index(choice)
         chosen_match = matches[selected_index]
-        path, _, _, file_data = chosen_match
+        path, _, _, file_data, overlay = chosen_match
         relative_path = os.path.join(path.parent.name, path.name)
+        
+        display_name = relative_path
+        if overlay:
+            overlay_summary = ", ".join(f"{k}={v}" for k, v in overlay.items())
+            display_name += f" (з оверлеєм: {overlay_summary})"
 
-        display_classic_diff(user_data, file_data, relative_path)
+        display_classic_diff(user_data, file_data, display_name)
 
         wait_for_enter("Натисніть Enter, щоб повернутись до меню...")
 
