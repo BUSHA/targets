@@ -4045,7 +4045,7 @@
             }
         },
         "rx_2400": {
-            "dual-core": {
+            "N24R_TD_D4": {
                 "product_name": "N24R_TD_D4 RX",
                 "lua_name": "N24R_TD_D4",
                 "layout_file": "Generic 2400 True Diversity PA.json",
