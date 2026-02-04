@@ -198,7 +198,16 @@
                 "min_version": "3.4.0",
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_LR1121_RX"
-            }
+            },
+            "bc_sub": {
+                "product_name": "B.c SubGHz Nano RX",
+                "lua_name": "B.c SubGHz RX",
+                "layout_file": "B.c SubGHz RX.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32C3_LR1121_RX"
+            }            
         },
         "rx_2400": {
             "nano": {
