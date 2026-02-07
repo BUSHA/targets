@@ -1421,7 +1421,16 @@
                 "min_version": "3.5.1",
                 "platform": "esp32-c3",
                 "firmware": "Unified_ESP32C3_LR1121_RX"
-            }
+            },
+            "ft_se4": {
+                "product_name": "FT SE4 900/2400 Dual Band Xross Gemini RX",
+                "lua_name": "FT SE4",
+                "layout_file": "SE4 C3 Dual Band Xross Gemini RX.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.1",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_LR1121_RX"
+            }            
         }
     },
     "frsky": {
