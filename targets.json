@@ -4139,7 +4139,19 @@
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_LR1121_TX"
             }
-        }
+        },
+        "tx_dual": {
+            "gemx_tx": {
+                "product_name": "Gemini XrossBand 2.4/900 TX",
+                "lua_name": "GemX TX",
+                "layout_file": "Gemini XrossBand 2.4-900 TX.json",
+                "features": ["fan"],
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.5.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            }
+        }        
     },
     "edifier": {
         "name": "Edifier",
