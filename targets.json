@@ -207,7 +207,7 @@
                 "min_version": "3.4.0",
                 "platform": "esp32",
                 "firmware": "Unified_ESP32C3_LR1121_RX"
-            }            
+            }
         },
         "rx_2400": {
             "nano": {
@@ -341,7 +341,7 @@
                 "min_version": "3.4.0",
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_LR1121_TX"
-            }            
+            }
         },
         "rx_dual": {
             "dual": {
@@ -563,9 +563,7 @@
                 "lua_name": "BFPV 14CH P900",
                 "layout_file": "Generic 900 True Diversity PWM 16.json",
                 "overlay": {
-                    "pwm_outputs": [
-                        13, 15, 2, 0, 4, 9, 10, 5, 18, 23, 19, 22, 3, 1
-                    ],
+                    "pwm_outputs": [13, 15, 2, 0, 4, 9, 10, 5, 18, 23, 19, 22, 3, 1],
                     "vbat_offset": 18,
                     "vbat_scale": 1284,
                     "vbat_atten": 7,
@@ -869,9 +867,7 @@
                     "power_values": [12],
                     "power_values_dual": [13],
                     "radio_rfsw_ctrl": [20, 0, 0, 0, 16, 4, 0, 0],
-                    "pwm_outputs": [
-                        43, 44, 17, 18, 48, 47, 10, 9, 34, 35, 37, 38
-                    ],
+                    "pwm_outputs": [43, 44, 17, 18, 48, 47, 10, 9, 34, 35, 37, 38],
                     "i2c_sda": 34,
                     "i2c_scl": 35,
                     "ledidx_rgb_status": [0],
@@ -973,6 +969,44 @@
                 "min_version": "3.5.0",
                 "platform": "esp32-c3",
                 "firmware": "Unified_ESP32C3_LR1121_RX"
+            },
+            "nanopro": {
+                "product_name": "DAKEFPV 900MHz NANOPRO MAX 500mW RX",
+                "lua_name": "DAKE 900RX",
+                "layout_file": "Generic C3 LR1121.json",
+                "overlay": {
+                    "radio_rfo_hf": true,
+                    "power_high": 0,
+                    "power_max": 5,
+                    "power_default": 3,
+                    "power_values": [-17, -14, -10, -7, -3, 1],
+                    "power_values_dual": null,
+                    "power_lna_gain": 17
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.6.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_LR1121_RX"
+            },
+            "max-1w": {
+                "product_name": "DAKEFPV 900MHz MAX 1000mW Diversity RX",
+                "lua_name": "DKFPV 1000 RX",
+                "layout_file": "Generic C3 LR1121.json",
+                "overlay": {
+                    "power_min": 1,
+                    "power_max": 6,
+                    "power_default": 3,
+                    "power_values": [-16, -13, -10, -6, -2, 2],
+                    "power_values_dual": null,
+                    "power_lna_gain": 16,
+                    "radio_rfo_hf": true,
+                    "radio_rfsw_ctrl": [31, 0, 4, 24, 24, 0, 0, 0],
+                    "ant_ctrl": 10
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.6.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_LR1121_RX"
             }
         },
         "rx_2400": {
@@ -1038,6 +1072,65 @@
                 "min_version": "3.5.0",
                 "platform": "esp32-c3",
                 "firmware": "Unified_ESP32C3_LR1121_RX"
+            },
+            "superd-pro": {
+                "product_name": "DAKEFPV 2G4 SuperD Pro MAX 500mW RX",
+                "lua_name": "DAKE SG24",
+                "layout_file": "Generic C3 LR1121 True Diversity.json",
+                "overlay": {
+                    "power_min": 1,
+                    "power_high": 5,
+                    "power_max": 5,
+                    "power_default": 5,
+                    "power_values": null,
+                    "power_values_dual": [-10, -6, -4, -2, 0],
+                    "power_lna_gain": 16
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_LR1121_RX"
+            }
+        },
+        "tx_900": {
+            "max": {
+                "product_name": "DAKEFPV 900MHz Micro MAX 2W TX",
+                "lua_name": "DKFPV 900TX 2W",
+                "layout_file": "DAKEFPV MAX.json",
+                "overlay": {
+                    "radio_rfo_hf": true,
+                    "power_apc2": 26,
+                    "power_control": 3,
+                    "power_values": [245, 245, 245, 245, 245, 245, 245, 245],
+                    "power_values2": [-15, -12, -10, -7, -4, 0, 5, 8],
+                    "power_values_dual": null
+                },
+                "logo_file": "dakefpv_tft.bin",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.6.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            }
+        },
+        "tx_2400": {
+            "max-1w": {
+                "product_name": "DAKEFPV 2.4GHz Micro MAX 1W TX",
+                "lua_name": "DKFPV 2400TX 1W",
+                "layout_file": "DAKEFPV MAX.json",
+                "overlay": {
+                    "power_control": 0,
+                    "power_min": 1,
+                    "power_max": 6,
+                    "power_high": 6,
+                    "power_values": null,
+                    "power_values_dual": [-18, -16, -14, -8, -5, -1],
+                    "power_lna_gain": 15
+                },
+                "logo_file": "dakefpv_tft.bin",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.6.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
             }
         }
     },
@@ -1430,7 +1523,7 @@
                 "min_version": "3.5.1",
                 "platform": "esp32-c3",
                 "firmware": "Unified_ESP32C3_LR1121_RX"
-            }            
+            }
         }
     },
     "frsky": {
@@ -1887,7 +1980,21 @@
                 "min_version": "3.4.0",
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_900_TX"
-            }            
+            },
+            "linkflow-v2": {
+                "product_name": "GEPRC LINKFLOW 900M TX V2",
+                "lua_name": "GEPRC 900 TX V2",
+                "layout_file": "GEPRC DualBand Linkflow.json",
+                "overlay": {
+                    "power_values_dual": null,
+                    "power_max": 7,
+                    "power_high": 7
+                },
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.6.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            }
         },
         "tx_dual": {
             "dual": {
@@ -1896,6 +2003,15 @@
                 "layout_file": "GEPRC 900_2400 Gemini Xrossband RX as TX.json",
                 "upload_methods": ["uart", "wifi"],
                 "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            },
+            "linkflow": {
+                "product_name": "GEPRC LINKFLOW 900/2400 Dual-Band TX",
+                "lua_name": "GEPRC DB TX",
+                "layout_file": "GEPRC DualBand Linkflow.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.6.0",
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_LR1121_TX"
             }
@@ -2376,6 +2492,17 @@
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_2400_RX"
             }
+        },
+        "tx_dual": {
+            "v12": {
+                "product_name": "HelloRadio IntV12 2.4/900 TX",
+                "lua_name": "HR V12 S-Band",
+                "layout_file": "HelloRadio V12.json",
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.6.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            }
         }
     },
     "hglrc": {
@@ -2456,9 +2583,9 @@
                 "lua_name": "HGL 9002G4 NANO",
                 "layout_file": "Generic C3 LR1121.json",
                 "overlay": {
-                    "power_values": [12,16,19,25],
-                    "power_values_dual": [-10,-6,-3,1],
-                    "radio_rfsw_ctrl": [31,0,12,4,4,10,0,9]
+                    "power_values": [12, 16, 19, 25],
+                    "power_values_dual": [-10, -6, -3, 1],
+                    "radio_rfsw_ctrl": [31, 0, 12, 4, 4, 10, 0, 9]
                 },
                 "upload_methods": ["uart", "wifi", "betaflight"],
                 "min_version": "3.6.0",
@@ -2470,9 +2597,9 @@
                 "lua_name": "HGL 9002G4 PRO",
                 "layout_file": "Generic C3 LR1121 True Diversity.json",
                 "overlay": {
-                    "power_values": [12,16,19,25],
-                    "power_values_dual": [-10,-6,-3,1],
-                    "radio_rfsw_ctrl": [31,0,12,4,4,10,0,9]
+                    "power_values": [12, 16, 19, 25],
+                    "power_values_dual": [-10, -6, -3, 1],
+                    "radio_rfsw_ctrl": [31, 0, 12, 4, 4, 10, 0, 9]
                 },
                 "upload_methods": ["uart", "wifi", "betaflight"],
                 "min_version": "3.6.0",
@@ -3627,6 +3754,31 @@
                 "min_version": "3.5.0",
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_LR1121_TX"
+            },
+            "ax12": {
+                "product_name": "RadioMaster AX12 2.4/900 TX",
+                "lua_name": "RM AX12 X-Band",
+                "layout_file": "Radiomaster AX12.json",
+                "validation_ignores": ["backpack_passthrough_baud"],
+                "upload_methods": ["uart", "wifi"],
+                "min_version": "3.4.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
+            },
+            "tx16smk3": {
+                "product_name": "RadioMaster TX16S MK3 Internal TX",
+                "lua_name": "RM TX16S MK3",
+                "layout_file": "Radiomaster GX12.json",
+                "overlay": {
+                    "power_values": [132, 120, 120, 120, 120, 120, 103],
+                    "power_values2": [-18, -14, -10, -7, -3, 0, 3],
+                    "power_values_dual": [-16, -12, -7, -4, 0, 4, 8],
+                    "radio_rfsw_ctrl": [15, 1, 4, 12, 12, 2, 0, 1]
+                },
+                "upload_methods": ["etx", "wifi"],
+                "min_version": "3.6.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_LR1121_TX"
             }
         },
         "rx_dual": {
@@ -4040,7 +4192,7 @@
                 "min_version": "3.4.0",
                 "platform": "esp8285",
                 "firmware": "Unified_ESP8285_LR1121_900_RX"
-            }            
+            }
         }
     },
     "mafia": {
@@ -4160,7 +4312,7 @@
                 "platform": "esp32",
                 "firmware": "Unified_ESP32_LR1121_TX"
             }
-        }        
+        }
     },
     "edifier": {
         "name": "Edifier",
@@ -4193,8 +4345,8 @@
                 "upload_methods": ["uart", "wifi", "betaflight"],
                 "min_version": "3.4.0",
                 "platform": "esp32",
-                "firmware": "Unified_ESP32_LR1121_RX"                
-            }            
+                "firmware": "Unified_ESP32_LR1121_RX"
+            }
         }
     },
     "belinrc": {
@@ -4505,7 +4657,7 @@
                 "upload_methods": ["uart", "wifi", "betaflight"],
                 "min_version": "3.5.0",
                 "platform": "esp32-c3",
-                "firmware": "Unified_ESP32C3_LR1121_RX"                
+                "firmware": "Unified_ESP32C3_LR1121_RX"
             }
         }
     },
@@ -4654,6 +4806,65 @@
                 "min_version": "3.5.0",
                 "platform": "esp32-c3",
                 "firmware": "Unified_ESP32C3_LR1121_RX"
+            }
+        }
+    },
+    "deepspace": {
+        "name": "DeepSpace",
+        "rx_2400": {
+            "nano": {
+                "product_name": "DEEPSPACE 2.4GHz Nano 100mw RX",
+                "lua_name": "DS 2G4 Nano RX",
+                "layout_file": "Generic C3 2400 PA.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_2400_RX"
+            }
+        }
+    },
+    "flyingrc": {
+        "name": "FlyingRC",
+        "rx_2400": {
+            "true-d": {
+                "product_name": "FlyingRC 2.4GHz True Diversity RX",
+                "lua_name": "FlyingRC 2G4 TD",
+                "layout_file": "Generic 2400 True Diversity PA.json",
+                "overlay": {
+                    "radio_dcdc": true
+                },
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32",
+                "firmware": "Unified_ESP32_2400_RX"
+            }
+        }
+    },
+    "omp": {
+        "name": "OMPHOBBY",
+        "rx_2400": {
+            "ofs3": {
+                "product_name": "OMPHOBBY OFS3+ 2.4 GHz RX",
+                "lua_name": "OMPHOBBY OFS3+",
+                "layout_file": "Generic C3 2400.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_2400_RX"
+            }
+        }
+    },
+    "orbit": {
+        "name": "ORBIT",
+        "rx_2400": {
+            "nano": {
+                "product_name": "ORBIT 2.4Ghz Nano RX",
+                "lua_name": "ORBIT 2400 RX",
+                "layout_file": "Generic C3 2400 PA.json",
+                "upload_methods": ["uart", "wifi", "betaflight"],
+                "min_version": "3.5.0",
+                "platform": "esp32-c3",
+                "firmware": "Unified_ESP32C3_2400_RX"
             }
         }
     }
