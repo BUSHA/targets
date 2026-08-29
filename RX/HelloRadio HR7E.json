@@ -34,6 +34,10 @@
     "button": 0,
 
     "vbat": 36,
-    "vbat_offset": -147,
-    "vbat_scale": 1239
+    "vbat_offset": 19,
+    "vbat_scale": 990,
+    "vbat_atten": 7,
+    "vbat_noreading": 8,
+    "vbat_cal_min": 4000,
+    "vbat_cal_max": 30000
   }

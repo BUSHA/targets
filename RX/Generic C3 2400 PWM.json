@@ -17,6 +17,10 @@
     "led_rgb": 8,
     "led_rgb_isgrb": true,
     "vbat": 0,
-    "vbat_offset": 12,
-    "vbat_scale": 410
+    "vbat_offset": 0,
+    "vbat_scale": 909,
+    "vbat_atten": 7,
+    "vbat_noreading": 13,
+    "vbat_cal_min": 3500,
+    "vbat_cal_max": 25200
 }

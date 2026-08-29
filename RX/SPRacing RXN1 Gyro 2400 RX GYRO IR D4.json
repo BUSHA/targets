@@ -71,6 +71,8 @@
     "vbat_atten": 7,
     "vbat_offset": -12,
     "vbat_scale": 902,
+    "vbat_cal_min": 4000,
+    "vbat_cal_max": 26000,
     "//": "Analog IN",
     "//": "A1 - GPIO34/ADC1_CH6",
     "//": "A2 - GPIO35/ADC1_CH7",
